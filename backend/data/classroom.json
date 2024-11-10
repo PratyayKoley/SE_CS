@@ -1,0 +1,82 @@
+[
+  {
+    "room_number": "101",
+    "capacity": "40"
+  },
+  {
+    "room_number": "102",
+    "capacity": "35"
+  },
+  {
+    "room_number": "103",
+    "capacity": "50"
+  },
+  {
+    "room_number": "104",
+    "capacity": "30"
+  },
+  {
+    "room_number": "105",
+    "capacity": "45"
+  },
+  {
+    "room_number": "201",
+    "capacity": "60"
+  },
+  {
+    "room_number": "202",
+    "capacity": "55"
+  },
+  {
+    "room_number": "203",
+    "capacity": "50"
+  },
+  {
+    "room_number": "204",
+    "capacity": "40"
+  },
+  {
+    "room_number": "205",
+    "capacity": "45"
+  },
+  {
+    "room_number": "301",
+    "capacity": "35"
+  },
+  {
+    "room_number": "302",
+    "capacity": "40"
+  },
+  {
+    "room_number": "303",
+    "capacity": "60"
+  },
+  {
+    "room_number": "304",
+    "capacity": "55"
+  },
+  {
+    "room_number": "305",
+    "capacity": "50"
+  },
+  {
+    "room_number": "401",
+    "capacity": "60"
+  },
+  {
+    "room_number": "402",
+    "capacity": "55"
+  },
+  {
+    "room_number": "403",
+    "capacity": "50"
+  },
+  {
+    "room_number": "404",
+    "capacity": "45"
+  },
+  {
+    "room_number": "405",
+    "capacity": "60"
+  }
+]

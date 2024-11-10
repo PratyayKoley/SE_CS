@@ -1,0 +1,262 @@
+[
+  {
+    "name": "Aarav Sharma",
+    "branch": "aids",
+    "subjects": [
+      "Maths",
+      "SE",
+      "CNN"
+    ],
+    "elective": "dl"
+  },
+  {
+    "name": "Vihaan Gupta",
+    "branch": "comp",
+    "subjects": [
+      "Maths",
+      "TCS",
+      "CN"
+    ],
+    "elective": "pgm"
+  },
+  {
+    "name": "Reyansh Patel",
+    "branch": "ecs",
+    "subjects": [
+      "Electronics",
+      "C-code",
+      "Wiring"
+    ],
+    "elective": "vlsi"
+  },
+  {
+    "name": "Arjun Mehta",
+    "branch": "aids",
+    "subjects": [
+      "Maths",
+      "SE",
+      "CNN"
+    ],
+    "elective": "ai"
+  },
+  {
+    "name": "Sai Reddy",
+    "branch": "comp",
+    "subjects": [
+      "Maths",
+      "TCS",
+      "CN"
+    ],
+    "elective": "ip"
+  },
+  {
+    "name": "Kabir Singh",
+    "branch": "ecs",
+    "subjects": [
+      "Electronics",
+      "C-code",
+      "Wiring"
+    ],
+    "elective": "em"
+  },
+  {
+    "name": "Rohan Verma",
+    "branch": "aids",
+    "subjects": [
+      "Maths",
+      "SE",
+      "CNN"
+    ],
+    "elective": "dl"
+  },
+  {
+    "name": "Karan Yadav",
+    "branch": "comp",
+    "subjects": [
+      "Maths",
+      "TCS",
+      "CN"
+    ],
+    "elective": "pgm"
+  },
+  {
+    "name": "Ayaan Joshi",
+    "branch": "ecs",
+    "subjects": [
+      "Electronics",
+      "C-code",
+      "Wiring"
+    ],
+    "elective": "vlsi"
+  },
+  {
+    "name": "Devansh Kapoor",
+    "branch": "aids",
+    "subjects": [
+      "Maths",
+      "SE",
+      "CNN"
+    ],
+    "elective": "ai"
+  },
+  {
+    "name": "Harsh Choudhury",
+    "branch": "comp",
+    "subjects": [
+      "Maths",
+      "TCS",
+      "CN"
+    ],
+    "elective": "pgm"
+  },
+  {
+    "name": "Nishant Saxena",
+    "branch": "ecs",
+    "subjects": [
+      "Electronics",
+      "C-code",
+      "Wiring"
+    ],
+    "elective": "em"
+  },
+  {
+    "name": "Kunal Jain",
+    "branch": "aids",
+    "subjects": [
+      "Maths",
+      "SE",
+      "CNN"
+    ],
+    "elective": "dl"
+  },
+  {
+    "name": "Parth Nair",
+    "branch": "comp",
+    "subjects": [
+      "Maths",
+      "TCS",
+      "CN"
+    ],
+    "elective": "ip"
+  },
+  {
+    "name": "Vihaan Roy",
+    "branch": "ecs",
+    "subjects": [
+      "Electronics",
+      "C-code",
+      "Wiring"
+    ],
+    "elective": "vlsi"
+  },
+  {
+    "name": "Shivam Bhatt",
+    "branch": "aids",
+    "subjects": [
+      "Maths",
+      "SE",
+      "CNN"
+    ],
+    "elective": "ai"
+  },
+  {
+    "name": "Lakshay Raina",
+    "branch": "comp",
+    "subjects": [
+      "Maths",
+      "TCS",
+      "CN"
+    ],
+    "elective": "pgm"
+  },
+  {
+    "name": "Arnav Ahuja",
+    "branch": "ecs",
+    "subjects": [
+      "Electronics",
+      "C-code",
+      "Wiring"
+    ],
+    "elective": "em"
+  },
+  {
+    "name": "Yash Patil",
+    "branch": "aids",
+    "subjects": [
+      "Maths",
+      "SE",
+      "CNN"
+    ],
+    "elective": "dl"
+  },
+  {
+    "name": "Aditya Sharma",
+    "branch": "comp",
+    "subjects": [
+      "Maths",
+      "TCS",
+      "CN"
+    ],
+    "elective": "ip"
+  },
+  {
+    "name": "Aarav Gupta",
+    "branch": "ecs",
+    "subjects": [
+      "Electronics",
+      "C-code",
+      "Wiring"
+    ],
+    "elective": "vlsi"
+  },
+  {
+    "name": "Pratyay Koley",
+    "branch": "comp",
+    "subjects": [
+      "Maths",
+      "TCS",
+      "CN"
+    ],
+    "elective": "pgm"
+  },
+  {
+    "name": "Sanyo Fonseca",
+    "branch": "comp",
+    "subjects": [
+      "Maths",
+      "TCS",
+      "CN"
+    ],
+    "elective": "ip"
+  },
+  {
+    "name": "Jonathan Gomes",
+    "branch": "comp",
+    "subjects": [
+      "Maths",
+      "TCS",
+      "CN"
+    ],
+    "elective": "ip"
+  },
+  {
+    "name": "Aryan Figer",
+    "branch": "comp",
+    "subjects": [
+      "Maths",
+      "TCS",
+      "CN"
+    ],
+    "elective": "ip"
+  },
+  {
+    "name": "Adarsh Gupta",
+    "branch": "comp",
+    "subjects": [
+      "Maths",
+      "TCS",
+      "CN"
+    ],
+    "elective": "pgm"
+  }
+]

@@ -1,0 +1,157 @@
+{
+  "Monday": {
+    "09:00-10:00": [],
+    "10:00-11:00": [
+      {
+        "subject": "Maths",
+        "teacher": "Gajendra Singh",
+        "classroom": "301"
+      }
+    ],
+    "11:00-12:00": [
+      {
+        "subject": "AI",
+        "teacher": "Natalie Walker",
+        "classroom": "301"
+      }
+    ],
+    "12:00-13:00": [],
+    "13:00-14:00": [],
+    "14:00-15:00": [
+      {
+        "subject": "SE",
+        "teacher": "Brijmohan Daga",
+        "classroom": "301"
+      },
+      {
+        "subject": "AI",
+        "teacher": "Natalie Walker",
+        "classroom": "302"
+      }
+    ]
+  },
+  "Tuesday": {
+    "09:00-10:00": [],
+    "10:00-11:00": [
+      {
+        "subject": "CNN",
+        "teacher": "Joshua Michael",
+        "classroom": "301"
+      },
+      {
+        "subject": "DL",
+        "teacher": "Kalpana Deorukhkar",
+        "classroom": "302"
+      }
+    ],
+    "11:00-12:00": [
+      {
+        "subject": "SE",
+        "teacher": "Brijmohan Daga",
+        "classroom": "301"
+      }
+    ],
+    "12:00-13:00": [],
+    "13:00-14:00": [],
+    "14:00-15:00": []
+  },
+  "Wednesday": {
+    "09:00-10:00": [
+      {
+        "subject": "DL",
+        "teacher": "Kalpana Deorukhkar",
+        "classroom": "301"
+      }
+    ],
+    "10:00-11:00": [
+      {
+        "subject": "CNN",
+        "teacher": "Joshua Michael",
+        "classroom": "301"
+      }
+    ],
+    "11:00-12:00": [
+      {
+        "subject": "Maths",
+        "teacher": "Gajendra Singh",
+        "classroom": "301"
+      }
+    ],
+    "12:00-13:00": [],
+    "13:00-14:00": [
+      {
+        "subject": "SE",
+        "teacher": "Brijmohan Daga",
+        "classroom": "301"
+      }
+    ],
+    "14:00-15:00": [
+      {
+        "subject": "CNN",
+        "teacher": "Joshua Michael",
+        "classroom": "301"
+      }
+    ]
+  },
+  "Thursday": {
+    "09:00-10:00": [
+      {
+        "subject": "Maths",
+        "teacher": "Gajendra Singh",
+        "classroom": "301"
+      }
+    ],
+    "10:00-11:00": [
+      {
+        "subject": "Maths",
+        "teacher": "Gajendra Singh",
+        "classroom": "301"
+      }
+    ],
+    "11:00-12:00": [],
+    "12:00-13:00": [],
+    "13:00-14:00": [],
+    "14:00-15:00": []
+  },
+  "Friday": {
+    "09:00-10:00": [],
+    "10:00-11:00": [
+      {
+        "subject": "CNN",
+        "teacher": "Joshua Michael",
+        "classroom": "301"
+      },
+      {
+        "subject": "AI",
+        "teacher": "Natalie Walker",
+        "classroom": "302"
+      }
+    ],
+    "11:00-12:00": [],
+    "12:00-13:00": [],
+    "13:00-14:00": [
+      {
+        "subject": "SE",
+        "teacher": "Brijmohan Daga",
+        "classroom": "301"
+      },
+      {
+        "subject": "DL",
+        "teacher": "Kalpana Deorukhkar",
+        "classroom": "302"
+      }
+    ],
+    "14:00-15:00": [
+      {
+        "subject": "DL",
+        "teacher": "Kalpana Deorukhkar",
+        "classroom": "301"
+      },
+      {
+        "subject": "AI",
+        "teacher": "Natalie Walker",
+        "classroom": "302"
+      }
+    ]
+  }
+}

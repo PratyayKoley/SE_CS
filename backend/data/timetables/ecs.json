@@ -1,0 +1,157 @@
+{
+  "Monday": {
+    "09:00-10:00": [],
+    "10:00-11:00": [],
+    "11:00-12:00": [
+      {
+        "subject": "Electronics",
+        "teacher": "Shilpa Patil",
+        "classroom": "101"
+      }
+    ],
+    "12:00-13:00": [],
+    "13:00-14:00": [
+      {
+        "subject": "Electronics",
+        "teacher": "Shilpa Patil",
+        "classroom": "101"
+      }
+    ],
+    "14:00-15:00": [
+      {
+        "subject": "Electronics",
+        "teacher": "Shilpa Patil",
+        "classroom": "101"
+      },
+      {
+        "subject": "EM",
+        "teacher": "Laura Thompson",
+        "classroom": "102"
+      }
+    ]
+  },
+  "Tuesday": {
+    "09:00-10:00": [
+      {
+        "subject": "VLSI",
+        "teacher": "Kevin Miller",
+        "classroom": "101"
+      },
+      {
+        "subject": "EM",
+        "teacher": "Laura Thompson",
+        "classroom": "102"
+      }
+    ],
+    "10:00-11:00": [
+      {
+        "subject": "Wiring",
+        "teacher": "William Brown",
+        "classroom": "101"
+      }
+    ],
+    "11:00-12:00": [
+      {
+        "subject": "Electronics",
+        "teacher": "Shilpa Patil",
+        "classroom": "101"
+      }
+    ],
+    "12:00-13:00": [],
+    "13:00-14:00": [
+      {
+        "subject": "EM",
+        "teacher": "Laura Thompson",
+        "classroom": "101"
+      }
+    ],
+    "14:00-15:00": [
+      {
+        "subject": "C-code",
+        "teacher": "Sarah Clark",
+        "classroom": "101"
+      }
+    ]
+  },
+  "Wednesday": {
+    "09:00-10:00": [],
+    "10:00-11:00": [
+      {
+        "subject": "VLSI",
+        "teacher": "Kevin Miller",
+        "classroom": "101"
+      }
+    ],
+    "11:00-12:00": [
+      {
+        "subject": "Wiring",
+        "teacher": "William Brown",
+        "classroom": "101"
+      },
+      {
+        "subject": "VLSI",
+        "teacher": "Kevin Miller",
+        "classroom": "102"
+      }
+    ],
+    "12:00-13:00": [],
+    "13:00-14:00": [],
+    "14:00-15:00": []
+  },
+  "Thursday": {
+    "09:00-10:00": [
+      {
+        "subject": "C-code",
+        "teacher": "Sarah Clark",
+        "classroom": "101"
+      }
+    ],
+    "10:00-11:00": [
+      {
+        "subject": "Wiring",
+        "teacher": "William Brown",
+        "classroom": "101"
+      }
+    ],
+    "11:00-12:00": [],
+    "12:00-13:00": [],
+    "13:00-14:00": [
+      {
+        "subject": "C-code",
+        "teacher": "Sarah Clark",
+        "classroom": "101"
+      }
+    ],
+    "14:00-15:00": []
+  },
+  "Friday": {
+    "09:00-10:00": [
+      {
+        "subject": "Wiring",
+        "teacher": "William Brown",
+        "classroom": "101"
+      },
+      {
+        "subject": "EM",
+        "teacher": "Laura Thompson",
+        "classroom": "102"
+      }
+    ],
+    "10:00-11:00": [],
+    "11:00-12:00": [
+      {
+        "subject": "C-code",
+        "teacher": "Sarah Clark",
+        "classroom": "101"
+      },
+      {
+        "subject": "VLSI",
+        "teacher": "Kevin Miller",
+        "classroom": "102"
+      }
+    ],
+    "12:00-13:00": [],
+    "13:00-14:00": [],
+    "14:00-15:00": []
+  }
+}

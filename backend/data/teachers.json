@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Prasad Lalit",
+    "teaching_subject": "Maths",
+    "branch": "comp"
+  },
+  {
+    "name": "Prajakta Dhamnaskar",
+    "teaching_subject": "TCS",
+    "branch": "comp"
+  },
+  {
+    "name": "Merly Thomas",
+    "teaching_subject": "CN",
+    "branch": "comp"
+  },
+  {
+    "name": "Shilpa Patil",
+    "teaching_subject": "Electronics",
+    "branch": "ecs"
+  },
+  {
+    "name": "Sarah Clark",
+    "teaching_subject": "C-code",
+    "branch": "ecs"
+  },
+  {
+    "name": "William Brown",
+    "teaching_subject": "Wiring",
+    "branch": "ecs"
+  },
+  {
+    "name": "Anna Davis",
+    "teaching_subject": "PGM",
+    "branch": "comp"
+  },
+  {
+    "name": "Prachi Patil",
+    "teaching_subject": "IP",
+    "branch": "comp"
+  },
+  {
+    "name": "Gajendra Singh",
+    "teaching_subject": "Maths",
+    "branch": "aids"
+  },
+  {
+    "name": "Kevin Miller",
+    "teaching_subject": "VLSI",
+    "branch": "ecs"
+  },
+  {
+    "name": "Laura Thompson",
+    "teaching_subject": "EM",
+    "branch": "ecs"
+  },
+  {
+    "name": "Brijmohan Daga",
+    "teaching_subject": "SE",
+    "branch": "aids"
+  },
+  {
+    "name": "Joshua Michael",
+    "teaching_subject": "CNN",
+    "branch": "aids"
+  },
+  {
+    "name": "Kalpana Deorukhkar",
+    "teaching_subject": "DL",
+    "branch": "aids"
+  },
+  {
+    "name": "Natalie Walker",
+    "teaching_subject": "AI",
+    "branch": "aids"
+  }
+]

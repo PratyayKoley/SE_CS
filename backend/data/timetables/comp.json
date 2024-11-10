@@ -1,0 +1,157 @@
+{
+  "Monday": {
+    "09:00-10:00": [
+      {
+        "subject": "Maths",
+        "teacher": "Prasad Lalit",
+        "classroom": "201"
+      },
+      {
+        "subject": "PGM",
+        "teacher": "Anna Davis",
+        "classroom": "202"
+      }
+    ],
+    "10:00-11:00": [],
+    "11:00-12:00": [],
+    "12:00-13:00": [],
+    "13:00-14:00": [],
+    "14:00-15:00": [
+      {
+        "subject": "CN",
+        "teacher": "Merly Thomas",
+        "classroom": "201"
+      }
+    ]
+  },
+  "Tuesday": {
+    "09:00-10:00": [
+      {
+        "subject": "CN",
+        "teacher": "Merly Thomas",
+        "classroom": "201"
+      },
+      {
+        "subject": "PGM",
+        "teacher": "Anna Davis",
+        "classroom": "202"
+      }
+    ],
+    "10:00-11:00": [
+      {
+        "subject": "Maths",
+        "teacher": "Prasad Lalit",
+        "classroom": "201"
+      }
+    ],
+    "11:00-12:00": [],
+    "12:00-13:00": [],
+    "13:00-14:00": [
+      {
+        "subject": "CN",
+        "teacher": "Merly Thomas",
+        "classroom": "201"
+      }
+    ],
+    "14:00-15:00": []
+  },
+  "Wednesday": {
+    "09:00-10:00": [],
+    "10:00-11:00": [],
+    "11:00-12:00": [
+      {
+        "subject": "TCS",
+        "teacher": "Prajakta Dhamnaskar",
+        "classroom": "201"
+      },
+      {
+        "subject": "PGM",
+        "teacher": "Anna Davis",
+        "classroom": "202"
+      },
+      {
+        "subject": "IP",
+        "teacher": "Prachi Patil",
+        "classroom": "203"
+      }
+    ],
+    "12:00-13:00": [],
+    "13:00-14:00": [
+      {
+        "subject": "IP",
+        "teacher": "Prachi Patil",
+        "classroom": "201"
+      }
+    ],
+    "14:00-15:00": [
+      {
+        "subject": "TCS",
+        "teacher": "Prajakta Dhamnaskar",
+        "classroom": "201"
+      }
+    ]
+  },
+  "Thursday": {
+    "09:00-10:00": [
+      {
+        "subject": "Maths",
+        "teacher": "Prasad Lalit",
+        "classroom": "201"
+      }
+    ],
+    "10:00-11:00": [
+      {
+        "subject": "IP",
+        "teacher": "Prachi Patil",
+        "classroom": "201"
+      }
+    ],
+    "11:00-12:00": [],
+    "12:00-13:00": [],
+    "13:00-14:00": [],
+    "14:00-15:00": [
+      {
+        "subject": "CN",
+        "teacher": "Merly Thomas",
+        "classroom": "201"
+      }
+    ]
+  },
+  "Friday": {
+    "09:00-10:00": [
+      {
+        "subject": "Maths",
+        "teacher": "Prasad Lalit",
+        "classroom": "201"
+      }
+    ],
+    "10:00-11:00": [],
+    "11:00-12:00": [
+      {
+        "subject": "TCS",
+        "teacher": "Prajakta Dhamnaskar",
+        "classroom": "201"
+      }
+    ],
+    "12:00-13:00": [],
+    "13:00-14:00": [
+      {
+        "subject": "IP",
+        "teacher": "Prachi Patil",
+        "classroom": "201"
+      }
+    ],
+    "14:00-15:00": [
+      {
+        "subject": "TCS",
+        "teacher": "Prajakta Dhamnaskar",
+        "classroom": "201"
+      },
+      {
+        "subject": "PGM",
+        "teacher": "Anna Davis",
+        "classroom": "202"
+      }
+    ]
+  }
+}
