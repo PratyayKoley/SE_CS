@@ -1,7 +1,7 @@
 const Subject = require('../models/Subject');
 const Teacher = require('../models/Teacher');
 const Classroom = require('../models/Classroom');
-const Timetable = require('../models/Timetable');
+const Timetable = require('../models/TimeTable');
 
 exports.generateTimeTable = async (req, res) => {
   try {

@@ -1,7 +1,7 @@
 const csv = require('csvtojson');
 const Teacher = require('../models/Teacher');
 const Student = require('../models/Student');
-const Timetable = require('../models/Timetable');
+const Timetable = require('../models/TimeTable');
 const Classroom = require('../models/Classroom');
 
 // Upload CSV of teachers and save them to MongoDB
