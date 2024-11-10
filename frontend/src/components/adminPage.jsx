@@ -31,7 +31,7 @@ export default function AdminPanel() {
         const formData = new FormData();
         formData.append('file', teacherFile);
 
-        fetch('http://localhost:5000/api/teachers/upload-teachers', {
+        fetch(`${process.env.REACT_APP_BACKEND_LINK}/api/teachers/upload-teachers`, {
             method: 'POST',
             body: formData,
         })
@@ -52,7 +52,7 @@ export default function AdminPanel() {
         const formData = new FormData();
         formData.append('file', classroomFile);
 
-        fetch('http://localhost:5000/api/classrooms/upload-classrooms', {
+        fetch(`${process.env.REACT_APP_BACKEND_LINK}/api/classrooms/upload-classrooms`, {
             method: 'POST',
             body: formData,
         })
@@ -73,7 +73,7 @@ export default function AdminPanel() {
         const formData = new FormData();
         formData.append('file', subjectFile);
 
-        fetch('http://localhost:5000/api/subjects/upload-subjects', {
+        fetch(`${process.env.REACT_APP_BACKEND_LINK}/api/subjects/upload-subjects`, {
             method: 'POST',
             body: formData,
         })
@@ -94,7 +94,7 @@ export default function AdminPanel() {
         const formData = new FormData();
         formData.append('file', studentFile);
 
-        fetch('http://localhost:5000/api/students/upload-students', {
+        fetch(`${process.env.REACT_APP_BACKEND_LINK}/api/students/upload-students`, {
             method: 'POST',
             body: formData,
         })

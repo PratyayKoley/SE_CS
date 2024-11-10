@@ -92,7 +92,7 @@ export default function StudentEnrollment() {
         const studentData = { name, semester, subjects, llc, elective1, elective2, openElective };
 
         // Submit the form data to the backend
-        fetch('http://localhost:5000/api/students/enroll-student', {
+        fetch(`${process.env.REACT_APP_BACKEND_LINK}/api/students/enroll-student`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -37,14 +37,14 @@ const ViewData = () => {
     useEffect(() => {
         const loadData = async () => {
             try {
-                const classroomResponse = await fetch('http://localhost:5000/api/classrooms');
-                const studentResponse = await fetch('http://localhost:5000/api/students');
-                const teacherResponse = await fetch('http://localhost:5000/api/teachers');
-
+                const classroomResponse = await fetch(`${process.env.REACT_APP_BACKEND_LINK}/api/classrooms`);
+                const studentResponse = await fetch(`${process.env.REACT_APP_BACKEND_LINK}/api/students`);
+                const teacherResponse = await fetch(`${process.env.REACT_APP_BACKEND_LINK}/api/teachers`);
+    
                 const classroomData = await classroomResponse.json();
                 const studentData = await studentResponse.json();
                 const teacherData = await teacherResponse.json();
-
+    
                 setClassrooms(classroomData);
                 setStudents(studentData);
                 setTeachers(teacherData);
@@ -52,7 +52,7 @@ const ViewData = () => {
                 console.error('Error fetching data:', error);
             }
         };
-
+    
         loadData();
     }, []);
 

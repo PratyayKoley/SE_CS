@@ -4,7 +4,7 @@ export default function GenerateTable() {
   const [timetable, setTimetable] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/timetable/generate')
+    fetch(`${process.env.REACT_APP_BACKEND_LINK}/api/timetable/generate`)
       .then((res) => res.json())
       .then((data) => setTimetable(data))
       .catch((err) => console.error(err))

@@ -11,7 +11,7 @@ const StudentUnderTeacherTable = () => {
         // Fetch students under the specified teacher from the backend
         const fetchStudentsUnderTeacher = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/teachers/getStudentUnderTeacher/${teacherName}`);
+                const response = await fetch(`${process.env.REACT_APP_BACKEND_LINK}/api/teachers/getStudentUnderTeacher/${teacherName}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch student data');
                 }

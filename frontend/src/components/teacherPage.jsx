@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import TimeTableDisplayTeacher from './TimetableDisplayTeacher';
 
 export default function TeacherPage() {
@@ -12,7 +12,7 @@ export default function TeacherPage() {
         // Fetch teacher names from the backend
         const fetchTeachers = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/teachers'); // Update this link as necessary
+                const response = await fetch(`${process.env.REACT_APP_BACKEND_LINK}/api/teachers`); // Update this link as necessary
                 if (!response.ok) {
                     throw new Error('Failed to fetch teachers');
                 }
@@ -33,7 +33,7 @@ export default function TeacherPage() {
     // Fetch timetable for the selected teacher
     const fetchTimetable = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/api/teachers/getTimeTable/${selectedTeacher}`);
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_LINK}/api/teachers/getTimeTable/${selectedTeacher}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch timetable');
             }

@@ -5,7 +5,7 @@ const StudentData = () => {
     const [students, setStudents] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/students')
+        fetch(`${process.env.REACT_APP_BACKEND_LINK}/api/students`)
             .then((response) => response.json())
             .then((data) => {
                 setStudents(data);
