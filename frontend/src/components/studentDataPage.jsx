@@ -55,7 +55,7 @@ const StudentData = () => {
                             <td className="py-3 px-4 border-r border-b border-gray-300">{student.elective1}</td>
                             <td className="py-3 px-4 border-r border-b border-gray-300">{student.elective2}</td>
                             <td className="py-3 px-4 border-r border-b border-gray-300">{student.openElective}</td>
-                            <td className="py-3 px-4 border-b border-gray-300">{student.llc}</td>
+                            <td className="py-3 px-4 border-b border-gray-300">{student.llc}</td> 
                         </tr>
                     ))}
                 </tbody>
