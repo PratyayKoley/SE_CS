@@ -18,9 +18,9 @@ function App() {
           <Route path="/adminpage" element={<AdminPanel />} />
           <Route path="/studentPage" element={<StudentEnrollment />} />
           <Route path='/teacherPage' element={<TeacherPanel />} />
-          <Route path="/studentDataPage" element={<StudentData />} />
+          <Route path="/studentData" element={<StudentData />} />
           <Route path="/studentUnderTeacherDataPage" element={<StudentUnderTeacherData />} />
-          <Route path="/generateTable" element={<GenerateTimetable />} />
+          <Route path="/generateTimeTable" element={<GenerateTimetable />} />
           <Route path="/viewData" element={<ViewData />} />
         </Routes>
       </div>

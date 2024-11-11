@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { CheckCircle, AlertCircle } from 'lucide-react';
 
 export default function StudentEnrollment() {
     const [name, setName] = useState('');
@@ -13,6 +14,7 @@ export default function StudentEnrollment() {
     const [availableLlc, setAvailableLlc] = useState([]);
     const [showLlc, setShowLlc] = useState(false);
     const [electiveCount, setElectiveCount] = useState(0);
+    const [notification, setNotification] = useState({ message: '', type: '' });
 
     const semesterSubjects = {
         '1': {
@@ -76,101 +78,113 @@ export default function StudentEnrollment() {
         { value: 'german', label: 'German' },
     ];
 
-    const handleSemesterChange = (e) => {
-        const selectedSemester = e.target.value;
-        setSemester(selectedSemester);
-        setSubjects(semesterSubjects[selectedSemester]?.subjects || []);
-        setShowLlc(semesterSubjects[selectedSemester]?.llc || false);
-        setAvailableElectives(semesterSubjects[selectedSemester]?.electives || []);
-        setAvailableOpenElectives(semesterSubjects[selectedSemester]?.openElectives || []);
-        setElectiveCount(semesterSubjects[selectedSemester]?.electiveCount || 0);
-        setAvailableLlc(llcOptions);
-    };
+    useEffect(() => {
+        if (semester) {
+            const semData = semesterSubjects[semester];
+            setSubjects(semData?.subjects || []);
+            setShowLlc(semData?.llc || false);
+            setAvailableElectives(semData?.electives || []);
+            setAvailableOpenElectives(semData?.openElectives || []);
+            setElectiveCount(semData?.electiveCount || 0);
+            setAvailableLlc(llcOptions);
 
-    const handleSubmit = (e) => {
+            // Reset fields that are not applicable to the selected semester
+            if (!semData?.llc) setLlc('');
+            if (!semData?.electives) {
+                setElective1('');
+                setElective2('');
+            }
+            if (!semData?.openElectives) setOpenElective('');
+        }
+    }, [semester]);
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        const studentData = { name, semester, subjects, llc, elective1, elective2, openElective };
+        const studentData = { 
+            name, 
+            semester, 
+            subjects, 
+            ...(showLlc && { llc }),
+            ...(electiveCount > 0 && { elective1 }),
+            ...(electiveCount > 1 && { elective2 }),
+            ...(availableOpenElectives.length > 0 && { openElective })
+        };
 
-        // Submit the form data to the backend
-        fetch(`${process.env.REACT_APP_BACKEND_LINK}/api/students/enroll-student`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(studentData),
-        })
-            .then((response) => response.text())
-            .then((data) => {
-                console.log(data);
-                alert('Student enrolled successfully!');
-            })
-            .catch((error) => {
-                console.error('Error:', error);
+        try {
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_LINK}/api/students/enroll-student`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(studentData),
             });
+
+            if (!response.ok) {
+                throw new Error('Failed to enroll student');
+            }
+
+            setNotification({ message: 'Student enrolled successfully!', type: 'success' });
+        } catch (error) {
+            console.error('Error:', error);
+            setNotification({ message: 'Failed to enroll student. Please try again.', type: 'error' });
+        }
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-gradient-to-br from-lightblue-400 to-darkblue-600 text-white">
+        <div className="min-h-screen p-8 bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center">
+            <form onSubmit={handleSubmit} className="bg-white bg-opacity-10 backdrop-blur-md p-10 rounded-3xl shadow-xl w-full max-w-4xl border border-white/30">
+                <h2 className="text-4xl mb-8 text-center font-semibold text-white">Student Enrollment</h2>
 
-            <form onSubmit={handleSubmit} className="bg-white bg-opacity-20 backdrop-blur-md p-10 rounded-3xl shadow-xl w-full max-w-4xl border border-white/30">
-                <h2 className="text-4xl mb-8 text-center font-semibold">Student Enrollment</h2>
-
-                {/* Flex container for horizontal layout */}
-                <div className="flex flex-wrap gap-6">
-                    {/* Name Input */}
-                    <div className="flex-1 mb-6">
-                        <label className="block mb-2 text-lg font-medium">Name</label>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label className="block mb-2 text-lg font-medium text-white">Name</label>
                         <input
                             type="text"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             required
-                            className="w-full p-3 rounded-md bg-white bg-opacity-30 placeholder-white text-white focus:ring-2 focus:ring-indigo-300 transition"
+                            className="w-full p-3 rounded-md bg-gray-800 bg-opacity-50 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-300 transition"
                             placeholder="Enter your name"
                         />
                     </div>
 
-                    {/* Semester Select */}
-                    <div className="flex-1 mb-6">
-                        <label className="block mb-2 text-lg font-medium">Semester</label>
+                    <div>
+                        <label className="block mb-2 text-lg font-medium text-white">Semester</label>
                         <select
                             value={semester}
-                            onChange={handleSemesterChange}
+                            onChange={(e) => setSemester(e.target.value)}
                             required
-                            className="w-full p-3 rounded-md bg-white bg-opacity-30 text-black focus:ring-2 focus:ring-indigo-300 transition"
+                            className="w-full p-3 rounded-md bg-gray-800 bg-opacity-50 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-300 transition"
                         >
                             <option value="">Select Semester</option>
-                            <option value="1">Sem 1</option>
-                            <option value="2">Sem 2</option>
-                            <option value="3">Sem 3</option>
-                            <option value="4">Sem 4</option>
-                            <option value="5">Sem 5</option>
-                            <option value="6">Sem 6</option>
+                            {Object.keys(semesterSubjects).map((sem) => (
+                                <option key={sem} value={sem}>Sem {sem}</option>
+                            ))}
                         </select>
                     </div>
                 </div>
 
-                {/* Subjects displayed in a grid format */}
-                <div className="mb-6">
-                    <label className="block mb-2 text-lg font-medium">Subjects</label>
-                    <div className="grid grid-cols-3 gap-4">
-                        {subjects.map((subject, index) => (
-                            <div key={index} className="p-3 rounded-md bg-white bg-opacity-20 text-white shadow-md">
-                                {subject}
-                            </div>
-                        ))}
+                {subjects.length > 0 && (
+                    <div className="mb-6">
+                        <label className="block mb-2 text-lg font-medium text-white">Subjects</label>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {subjects.map((subject, index) => (
+                                <div key={index} className="p-3 rounded-md bg-gray-800 bg-opacity-50 text-white shadow-md">
+                                    {subject}
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                )}
 
-                {/* LLC (if applicable) */}
                 {showLlc && (
                     <div className="mb-6">
-                        <label className="block mb-2 text-lg font-medium">LLC</label>
+                        <label className="block mb-2 text-lg font-medium text-white">LLC</label>
                         <select
                             value={llc}
                             onChange={(e) => setLlc(e.target.value)}
                             required
-                            className="w-full p-3 rounded-md bg-white bg-opacity-30 text-black focus:ring-2 focus:ring-indigo-300 transition"
+                            className="w-full p-3 rounded-md bg-gray-800 bg-opacity-50 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-300 transition"
                         >
                             <option value="">Select LLC course</option>
                             {availableLlc.map((llcOption) => (
@@ -182,38 +196,38 @@ export default function StudentEnrollment() {
                     </div>
                 )}
 
-                {/* Electives (if applicable) */}
                 {electiveCount > 0 && (
                     <div className="mb-6">
-                        <label className="block mb-2 text-lg font-medium">Elective(s)</label>
-                        {[...Array(electiveCount)].map((_, i) => (
-                            <select
-                                key={i}
-                                value={i === 0 ? elective1 : elective2}
-                                onChange={(e) => i === 0 ? setElective1(e.target.value) : setElective2(e.target.value)}
-                                required
-                                className="w-full p-3 rounded-md bg-white bg-opacity-30 text-black focus:ring-2 focus:ring-indigo-300 transition mb-3"
-                            >
-                                <option value="">Select elective {i + 1}</option>
-                                {availableElectives.map((elective) => (
-                                    <option key={elective.value} value={elective.value}>
-                                        {elective.label}
-                                    </option>
-                                ))}
-                            </select>
-                        ))}
+                        <label className="block mb-2 text-lg font-medium text-white">Elective(s)</label>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {[...Array(electiveCount)].map((_, i) => (
+                                <select
+                                    key={i}
+                                    value={i === 0 ? elective1 : elective2}
+                                    onChange={(e) => i === 0 ? setElective1(e.target.value) : setElective2(e.target.value)}
+                                    required
+                                    className="w-full p-3 rounded-md bg-gray-800 bg-opacity-50 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-300 transition"
+                                >
+                                    <option value="">Select elective {i + 1}</option>
+                                    {availableElectives.map((elective) => (
+                                        <option key={elective.value} value={elective.value}>
+                                            {elective.label}
+                                        </option>
+                                    ))}
+                                </select>
+                            ))}
+                        </div>
                     </div>
                 )}
 
-                {/* Open Elective (if applicable) */}
                 {availableOpenElectives.length > 0 && (
                     <div className="mb-6">
-                        <label className="block mb-2 text-lg font-medium">Open Elective</label>
+                        <label className="block mb-2 text-lg font-medium text-white">Open Elective</label>
                         <select
                             value={openElective}
                             onChange={(e) => setOpenElective(e.target.value)}
                             required
-                            className="w-full p-3 rounded-md bg-white bg-opacity-30 text-black focus:ring-2 focus:ring-indigo-300 transition"
+                            className="w-full p-3 rounded-md bg-gray-800 bg-opacity-50 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-300 transition"
                         >
                             <option value="">Select Open Elective</option>
                             {availableOpenElectives.map((oe) => (
@@ -227,10 +241,17 @@ export default function StudentEnrollment() {
 
                 <button
                     type="submit"
-                    className="w-full p-3 rounded-md bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300 transition text-lg font-medium text-white"
+                    className="w-full p-3 rounded-md bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition text-lg font-medium text-white"
                 >
                     Enroll
                 </button>
+
+                {notification.message && (
+                    <div className={`mt-4 p-3 rounded-md ${notification.type === 'success' ? 'bg-green-500' : 'bg-red-500'} text-white flex items-center`}>
+                        {notification.type === 'success' ? <CheckCircle className="mr-2" /> : <AlertCircle className="mr-2" />}
+                        {notification.message}
+                    </div>
+                )}
             </form>
         </div>
     );

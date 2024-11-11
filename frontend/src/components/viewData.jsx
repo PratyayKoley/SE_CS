@@ -14,7 +14,6 @@ import {
     PointElement
 } from 'chart.js';
 
-// Registering the components
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -28,12 +27,11 @@ ChartJS.register(
     PointElement
 );
 
-const ViewData = () => {
+export default function Component() {
     const [classrooms, setClassrooms] = useState([]);
     const [students, setStudents] = useState([]);
     const [teachers, setTeachers] = useState([]);
 
-    // Fetch data from backend API
     useEffect(() => {
         const loadData = async () => {
             try {
@@ -467,44 +465,92 @@ const ViewData = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-100 to-pink-200 p-6">
-            <h2 className="text-4xl text-center text-gray-700 mb-12 font-extrabold tracking-wide">
-                Admin Data Visualization
+        <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 p-8">
+            <h2 className="text-4xl text-center text-gray-800 mb-12 font-extrabold tracking-tight">
+                Admin Dashboard
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Student Enrollment Bar Chart */}
-                <div className="bg-white p-6 rounded-xl shadow-lg">
-                    <h3 className="text-2xl mb-4 font-bold">Student Enrollment by Branch</h3>
-                    <Bar data={studentData} />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="bg-white rounded-2xl shadow-xl p-6 transition duration-300 ease-in-out transform hover:scale-105">
+                    <h3 className="text-2xl mb-4 font-bold text-gray-700">Student Enrollment by Semester</h3>
+                    <Bar data={studentData} options={{
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Student Distribution'
+                            }
+                        }
+                    }} />
                 </div>
 
-                {/* Teacher Distribution Bar Chart */}
-                <div className="bg-white p-6 rounded-xl shadow-lg">
-                    <h3 className="text-2xl mb-4 font-bold">Teacher Distribution by Subject</h3>
-                    <Bar data={teacherData} />
+                <div className="bg-white rounded-2xl shadow-xl p-6 transition duration-300 ease-in-out transform hover:scale-105">
+                    <h3 className="text-2xl mb-4 font-bold text-gray-700">Teacher Distribution by Subject</h3>
+                    <Bar data={teacherData} options={{
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Teacher Distribution'
+                            }
+                        }
+                    }} />
                 </div>
 
-                {/* Classroom Capacity Bar Chart */}
-                <div className="bg-white p-6 rounded-xl shadow-lg">
-                    <h3 className="text-2xl mb-4 font-bold">Classroom Capacity</h3>
-                    <Bar data={classroomData} />
+                <div className="bg-white rounded-2xl shadow-xl p-6 transition duration-300 ease-in-out transform hover:scale-105">
+                    <h3 className="text-2xl mb-4 font-bold text-gray-700">Classroom Capacity</h3>
+                    <Bar data={classroomData} options={{
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Classroom Capacities'
+                            }
+                        }
+                    }} />
                 </div>
 
-                {/* Subjects Offered Pie Chart */}
-                <div className="bg-white p-6 rounded-xl shadow-lg">
-                    <h3 className="text-2xl mb-4 font-bold">Subjects Offered</h3>
-                    <Pie data={subjectDistributionData} />
+                <div className="bg-white rounded-2xl shadow-xl p-6 transition duration-300 ease-in-out transform hover:scale-105">
+                    <h3 className="text-2xl mb-4 font-bold text-gray-700">Subjects Offered</h3>
+                    <Pie data={subjectDistributionData} options={{
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Subject Distribution'
+                            }
+                        }
+                    }} />
                 </div>
 
-                {/* Electives Chosen Pie Chart */}
-                <div className="bg-white p-6 rounded-xl shadow-lg">
-                    <h3 className="text-2xl mb-4 font-bold">Electives Chosen</h3>
-                    <Pie data={electiveDistributionData} />
+                <div className="bg-white rounded-2xl shadow-xl p-6 transition duration-300 ease-in-out transform hover:scale-105">
+                    <h3 className="text-2xl mb-4 font-bold text-gray-700">Electives Chosen</h3>
+                    <Pie data={electiveDistributionData} options={{
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Elective Distribution'
+                            }
+                        }
+                    }} />
                 </div>
             </div>
         </div>
     );
-};
-
-export default ViewData;
+}
