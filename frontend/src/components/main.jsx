@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { MessageCircle } from 'lucide-react'
 
 export default function Component() {
@@ -47,12 +47,14 @@ export default function Component() {
                     ))}
                 </div>
             </div>
-            <button
-                className="mt-8 px-6 py-3 bg-white bg-opacity-20 hover:bg-opacity-30 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 flex items-center gap-2"
-            >
-                <MessageCircle className="w-5 h-5" />
-                <span>Chat with your syllabus AI</span>
-            </button>
+            <Link to="https://coursepscheduling.streamlit.app/" target='_blank'>
+                <button
+                    className="mt-8 px-6 py-3 bg-white bg-opacity-20 hover:bg-opacity-30 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 flex items-center gap-2"
+                >
+                    <MessageCircle className="w-5 h-5" />
+                    <span>Chat with your syllabus AI</span>
+                </button>
+            </Link>
             {selectedUser && (
                 <p className="mt-8 text-white text-xl font-semibold animate-fadeIn">
                     You selected: {selectedUser.charAt(0).toUpperCase() + selectedUser.slice(1)} user
