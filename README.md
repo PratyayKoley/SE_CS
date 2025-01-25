@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+# Course Scheduling System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Table of Contents
 
-## Available Scripts
+1. [Collaborators](#collaborators)
+2. [Introduction](#introduction)
+3. [Features](#features)
+4. [Tech Stack](#tech-stack)
+   * [Backend](#backend)
+   * [Frontend](#frontend)
+5. [Installation](#installation)
+6. [Usage](#usage)
+7. [Screenshots](#screenshots)
+8. [License](#license)
 
-In the project directory, you can run:
+## Collaborators
 
-### `npm start`
+- [Sanyo Fonseca](https://github.com/sAnyo08)
+- [Jonathan Gomes](https://github.com/JonathanJourney99)
+- [Adarsh Gupta](https://github.com/bugsnotallowed)
+- [Aryan Figer](https://github.com/aryanfiger)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Introduction
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project is a comprehensive student enrollment and management system that integrates automated timetable generation, effeicient data management and upload, and authentication. It is designed to simplify academic administration for educational institutions by offering an intuitive interface for students, teachers, and administrators.
 
-### `npm test`
+The platform is hosted at [se-cs.vercel.app](https://se-cs.vercel.app).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- **Student Enrollment:** Allows students to enroll in courses through an interactive interface.
+- **Timetable Generation:** Automatically generates lecture timetables based on input data csv.
+- **Teacher Dashboard:** Enables faculty members to manage schedules and view their assignments.
+- **Admin Panel:** Provides administrators tools to manage student data, faculty information, generate timetable and courses.
+- **CSV Integration:** Supports uploading and downloading data in CSV format for batch processing.
+- **Authentication:** Secures the platform with user authentication.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Node.js & Express.js:** API development and routing, timetable generation and data processing.
+- **Python:** Chat with your institution syllabus by just uploading your pdf.
+- **MongoDB:** Database for storing student, teacher, course, and timetable information.
 
-### `npm run eject`
+### Frontend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React.js with MERN Stack:** Interactive user interface development, dashboard creation for admin features.
+- **Streamlit:** User Interface for Chat with Syllabus.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/PratyayKoley/SE_CS.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd SE_CS
+   ```
+3. Install dependencies:
+   ```bash
+   npm install # for frontend
+   cd backend && npm install # for backend
+   ```
+4. Start the application:
+   ```bash
+   npm start # for frontend
+   cd backend && npm start # for backend
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
 
-## Learn More
+1. Visit the hosted link: [se-cs.vercel.app](https://se-cs.vercel.app).
+2. Login with appropriate credentials:
+   - Students: View courses and enroll.
+   - Teachers: Access dashboard and schedules.
+   - Admins: Manage data and generate timetables.
+3. Use the CSV upload/download feature for bulk data operations.
+   - **CSV of Students:**
+     | name | semester    | subjects     | llc          | elective1   | elective2   | openElective |
+     | ---- | ----------- | ------------ | ------------ | ----------- | ----------- | ------------ |
+     | Name | Current Sem | Subject A, B | Language LLC | Elective A1 | Elective B1 | Open A       |
+   - **CSV of Teachers:**
+     | name | teaching_subjects | lectureLoad           |
+     | ---- | ----------------- | --------------------- |
+     | Name | Subjects          | no. of lecs per month |
+   - **CSV of Subjects:**
+     | code     | name     | branch | semester | classesPerWeek | requiresLab | isElective | electiveGroup | expectedCapacity |
+     | -------- | -------- | ------ | -------- | -------------- | ----------- | ---------- | ------------- | ---------------- |
+     | sub code | sub name | branch | sem      | no. of class   | true/false  | true/false | llc/elective  | no. of students  |
+   - **CSV of Classrooms:**
+     | roomNumber | capacity        | isLab      | bookings.semester |
+     | ---------- | --------------- | ---------- | ----------------- |
+     | room no    | no. of students | true/false | sem               |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Screenshots
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+*FlowChart*
 
-### Code Splitting
+![FlowChart](./assets/FlowChart.png "FlowChart")
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+*HomePage*
 
-### Analyzing the Bundle Size
+![HomePage](./assets/Home.png "HomePage")
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+*Student Dashboard*
 
-### Making a Progressive Web App
+![Student Enrollment](./assets/Student_Enrollment.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+*Admin Dashboard*
 
-### Advanced Configuration
+![Admin Dashboard](./assets/Admin_Dashboard.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+*Student Data*
 
-### Deployment
+![Student Data](./assets/Student_Data.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+*Admin Visuals*
 
-### `npm run build` fails to minify
+![Admin Visuals](./assets/Admin_Visuals.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*TimeTable*
+
+![TimeTable](./assets/TimeTable.png)
+
+*Teacher Dashboard*
+
+![Teacher Dashboard](./assets/Teacher_Dashboard.png)
+
+*Teachers TimeTable*
+
+![Student Enrollment](./assets/Teachers_TT.png)
+
+*Chat With Syllabus*
+
+![Chat with Syllabus](./assets/Chat_with_PDF.png)
+
+*Demo Chat*
+
+![Chatting](./assets/Demo_Chat.png)
+
+## License
+
+This project is licensed under the MIT License.
